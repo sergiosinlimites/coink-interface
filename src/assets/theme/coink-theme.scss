@@ -1,0 +1,90 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$dark-green-pallette: (
+  50: #e0f2f1,
+  100: #b3dfdb,
+  200: #80cac4,
+  300: #4db4ac,
+  400: #26a49a,
+  500: #009488,
+  600: #008c80,
+  700: #008175,
+  800: #00776b,
+  900: #006558,
+  A100: #95ffef,
+  A200: #62ffe7,
+  A400: #2fffdf,
+  A700: #15ffdb,
+  contrast: (
+    200: #000000
+    300: #000000
+    500: #ffffff
+    700: #ffffff
+    900: #ffffff
+  )
+);
+
+$light-green-pallette: (
+  50: #e4fde0,
+  100: #bcf9b3,
+  200: #8ff580,
+  300: #62f14d,
+  400: #40ee26,
+  500: #1eeb00,
+  600: #1ae900,
+  700: #16e500,
+  800: #12e200,
+  900: #0add00,
+  A100: #ffffff,
+  A200: #d2ffd1,
+  A400: #9fff9e,
+  A700: #86ff85,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$coink-interface-primary: mat.define-palette($dark-green-pallette);
+$coink-interface-accent: mat.define-palette($light-green-pallette);
+
+// The warn palette is optional (defaults to red).
+$coink-interface-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$coink-interface-theme: mat.define-light-theme((
+  color: (
+    primary: $coink-interface-primary,
+    accent: $coink-interface-accent,
+    warn: $coink-interface-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($coink-interface-theme);
