@@ -1,0 +1,43 @@
+@import '/src/styles.scss';
+
+header {
+  background-color: $green;
+  color:$white;
+  width: 100%;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  .left-side {
+    width:241px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .left-side__figure {
+      max-height:33px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      .cerdo {
+        height: 30px;
+        width: fit-content;
+      }
+      .coink {
+        height: 16px;
+        width: fit-content;
+      }
+    }
+  }
+  .right-side {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 23px;
+    justify-content: space-between;
+    span {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+}

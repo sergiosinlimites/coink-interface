@@ -57,6 +57,7 @@ $black: #212121;
 $gray: #BDBDBD;
 $dark-green: #003336;
 $green: #004B40;
+$soft-green: #D1FBD9;
 $light-green: #C4F6DC;
 $bright-green: #1EEB00;
 
@@ -89,4 +90,14 @@ body { margin: 0; font-family: "Montserrat", Roboto, "Helvetica Neue", sans-seri
   color: #b41212;
   margin-top: 10px;
   font-size:1rem;
+}
+
+.white-icon {
+  color: $white;
+  font-size:26px;
+}
+
+.black-icon {
+  color: $black;
+  font-size:26px;
 }

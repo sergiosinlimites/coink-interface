@@ -4,6 +4,8 @@ import { MenuDispensadoresComponent } from './menu-dispensadores/menu-dispensado
 import { HeaderDispensadoresComponent } from './header-dispensadores/header-dispensadores.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DispensadoresComponent } from './dispensadores.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { DispensadoresService } from './shared/dispensadores.service';
 
 const routes: Routes = [
   {
@@ -20,7 +22,11 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild(routes)
+  ],
+  providers: [
+    DispensadoresService
   ]
 })
 export class DispensadoresModule { }
