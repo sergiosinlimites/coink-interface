@@ -1,0 +1,51 @@
+@import '/src/styles.scss';
+
+.paginator-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  height: 100px;
+  .paginator__showing {
+    font-size: 1.4rem;
+    color: $gray;
+  }
+  .paginator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+    min-height: 20px;
+    .paginator__button {
+      background-color: transparent;
+      border: none;
+      width: 20px;
+      height: 20px;
+      .icon {
+        font-size: 1.8rem !important;
+        color: $bright-green;
+      }
+    }
+    .page-number {
+      background-color: transparent;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $dark-green;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+    .page-selected {
+      background-color: $bright-green;
+    }
+  }
+  .paginator__no-more {
+    font-size: 1.4rem;
+  }
+  @media (min-width:1025px){
+    padding: 20px 50px;
+  }
+}

@@ -1,0 +1,16 @@
+<div class="paginator-container">
+  <span class="paginator__showing">Mostrando 20 de {{ info.count || 20 }}</span>
+  <div *ngIf="totalPages > 1; else noPages" class="paginator">
+    <button class="paginator__button mr-10" (click)="changePage('prev')">
+      <mat-icon aria-hidden="false" aria-label="Menu icon" class="icon pointer" fontIcon="arrow_back_ios"></mat-icon>
+    </button>
+    <div *ngFor="let page of shownPages" class="page-number" [class.page-selected]="page === currentPage">{{ page }}
+    </div>
+    <button class="paginator__button" (click)="changePage('next')">
+      <mat-icon aria-hidden="false" aria-label="Menu icon" class="icon pointer" fontIcon="arrow_forward_ios"></mat-icon>
+    </button>
+  </div>
+  <ng-template #noPages>
+    <span class="paginator__no-more">No existen más páginas para mostrar</span>
+  </ng-template>
+</div>
