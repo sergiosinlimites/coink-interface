@@ -4,6 +4,7 @@ import { HttpService } from 'src/app/shared/services/http.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { DispensadoresService, Info } from './shared/dispensadores.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-dispensadores',
@@ -29,6 +30,8 @@ export class DispensadoresComponent implements OnInit {
   tipo: string | undefined
   /** Gets the current state of the toggle menu */
   activeMenu: boolean = false;
+  /** Sorts the data */
+  @ViewChild(MatSort, { static: true }) sort!: MatSort;
 
   constructor (
     private httpService: HttpService,
@@ -72,6 +75,7 @@ export class DispensadoresComponent implements OnInit {
       this.data = response.results;
       this.dispensadoresService.setTableInfo(response.info);
       this.dataSource = new MatTableDataSource(this.data);
+      this.dataSource.sort = this.sort;
     });
   }
 
