@@ -8,7 +8,10 @@ import { Subscription } from 'rxjs'
 })
 export class MenuDispensadoresComponent implements OnInit, OnDestroy {
 
+  /** Gets the current state of the toggle menu */
   public menuActive: boolean = false;
+
+  /** Subscription */
   private menuToggleData: Subscription = new Subscription;
 
   constructor(

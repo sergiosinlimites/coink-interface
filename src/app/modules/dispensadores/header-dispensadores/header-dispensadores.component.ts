@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DispensadoresService } from '../shared/dispensadores.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { DispensadoresService } from '../shared/dispensadores.service';
 })
 export class HeaderDispensadoresComponent implements OnInit {
 
+  /** Gets the current state of the toggle menu */
   public menuActive: boolean = false;
 
   constructor(
@@ -18,6 +19,7 @@ export class HeaderDispensadoresComponent implements OnInit {
     this.dispensadoresService.menuToggle.subscribe(menu => this.menuActive = menu)
   }
 
+  /** Modifies the state of the toggle menu */
   toggleMenu(){
     this.dispensadoresService.toggleMenu();
   }
