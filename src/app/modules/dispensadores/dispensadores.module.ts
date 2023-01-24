@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DispensadoresComponent } from './dispensadores.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { DispensadoresService } from './shared/dispensadores.service';
+import { PaginatorDispensadoresComponent } from './paginator-dispensadores/paginator-dispensadores.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,8 @@ const routes: Routes = [
   declarations: [
     MenuDispensadoresComponent,
     HeaderDispensadoresComponent,
-    DispensadoresComponent
+    DispensadoresComponent,
+    PaginatorDispensadoresComponent
   ],
   imports: [
     CommonModule,

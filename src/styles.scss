@@ -86,6 +86,14 @@ body { margin: 0; font-family: "Montserrat", Roboto, "Helvetica Neue", sans-seri
   margin-bottom: 60px;
 }
 
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
 .input-error {
   color: #b41212;
   margin-top: 10px;
@@ -100,4 +108,34 @@ body { margin: 0; font-family: "Montserrat", Roboto, "Helvetica Neue", sans-seri
 .black-icon {
   color: $black;
   font-size:26px;
+}
+
+.transparent-button {
+  min-width: 150px;
+  min-height: 35px;
+  width: fit-content;
+  border: 2px solid $green;
+  border-radius: 4px;
+  background-color: transparent;
+  color: $green;
+  font-weight: 600;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.green-button {
+  min-width: 150px;
+  min-height: 35px;
+  width: fit-content;
+  border: 2px solid $green;
+  border-radius: 4px;
+  background-color: $green;
+  color: $white;
+  font-weight: 600;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.pointer {
+  cursor: pointer;
 }
